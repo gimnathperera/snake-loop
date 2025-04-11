@@ -15,9 +15,10 @@ import { checkCollision, generateRandomPosition, isPositionOnSnake } from "@/uti
 interface UseSnakeGameProps {
   onEatFood?: () => void;
   onGameOver?: () => void;
+  onGameStart?: () => void;
 }
 
-export const useSnakeGame = ({ onEatFood, onGameOver }: UseSnakeGameProps = {}) => {
+export const useSnakeGame = ({ onEatFood, onGameOver, onGameStart }: UseSnakeGameProps = {}) => {
   const [snake, setSnake] = useState<Position[]>(INITIAL_SNAKE);
   const [food, setFood] = useState<Position>(INITIAL_FOOD);
   const [direction, setDirection] = useState<Direction>(INITIAL_DIRECTION);
@@ -113,7 +114,7 @@ export const useSnakeGame = ({ onEatFood, onGameOver }: UseSnakeGameProps = {}) 
       gameIntervalRef.current = null;
     }
     
-    // Play game over sound
+    // Play game over sound and stop background music
     onGameOver?.();
     
     if (score > highScore) {
@@ -137,6 +138,9 @@ export const useSnakeGame = ({ onEatFood, onGameOver }: UseSnakeGameProps = {}) 
     setIsPaused(false);
     shouldGrowRef.current = false;
     setHasShownHighScoreToast(false);
+    
+    // Start background music when game resets
+    onGameStart?.();
   };
 
   // Toggle pause state

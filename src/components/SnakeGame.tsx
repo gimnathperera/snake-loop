@@ -38,6 +38,7 @@ const SnakeGame = () => {
   } = useSnakeGame({
     onEatFood: playEatFood,
     onGameOver: playGameOver,
+    onGameStart: playBackgroundMusic,
   });
   // Initialize game
   useEffect(() => {
