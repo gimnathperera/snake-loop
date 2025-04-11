@@ -2,6 +2,12 @@
 
 A classic Snake game implementation with a modern twist, built with React, RTK Queries and TypeScript.
 
+<img 
+    src="https://github.com/user-attachments/assets/e79a8dae-8b78-48a8-8a2b-296d2b913b93" 
+    alt="Snake Loop Game Demo" 
+    width="800" 
+    style="border: 2px solid #ccc; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);"
+  />
 ## Features
 
 - 🎮 Smooth snake movement and keyboard controls
