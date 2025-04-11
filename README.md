@@ -1,6 +1,6 @@
 # Snake Loop Game 🐍
 
-A classic Snake game implementation with a modern twist, built with React, TypeScript, and HTML5 Canvas.
+A classic Snake game implementation with a modern twist, built with React, RTK Queries and TypeScript.
 
 ## Features
 
@@ -50,7 +50,7 @@ A classic Snake game implementation with a modern twist, built with React, TypeS
    yarn dev
    ```
 
-4. Open [http://localhost:3000](http://localhost:3000) in your browser to play the game.
+4. Open [http://localhost:8080](http://localhost:8080) in your browser to play the game.
 
 ## Scripts
 
